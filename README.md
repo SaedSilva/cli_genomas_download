@@ -2,6 +2,8 @@
 
 Aplicativo para download de Genomas.
 
+![](https://www.rust-lang.org/static/images/rust-logo-blk.svg)
+
 ## Instalação resumida.
 
 1. Baixe o arquivo
