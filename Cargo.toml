@@ -1,0 +1,11 @@
+[package]
+name = "genomas"
+version = "0.1.0"
+edition = "2021"
+authors = ["Saed Silva Sousa"]
+
+[dependencies]
+flate2 = "1.0.35"
+reqwest = { version = "0.12.9", features = ["blocking", "json", "stream"] }
+serde = { version = "1.0.215", features = ["derive"] }
+zip = "2.2.1"
