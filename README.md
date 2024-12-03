@@ -54,8 +54,5 @@ Aplicativo para download de Genomas.
    ```bash
    ./genomas
    ```
-   ```bash
-   ./genomas
-   ```
    
 
