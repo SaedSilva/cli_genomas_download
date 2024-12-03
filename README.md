@@ -2,9 +2,27 @@
 
 Aplicativo para download de Genomas.
 
-## Instalação
+## Instalação resumida.
 
-Siga estas etapas para configurar o projeto:
+1. Baixe o arquivo
+
+   [Windows](https://github.com/SaedSilva/cli_genomas_download/raw/refs/heads/main/bin/x86_64-pc-windows-gnu/release/genomas.exe)
+   
+   [Linux](https://github.com/SaedSilva/cli_genomas_download/raw/refs/heads/main/bin/x86_64-unknown-linux-gnu/release/genomas)
+
+2. Execute o projeto
+   
+   Windows:
+   ```bash
+   genomas.exe
+   ```
+   
+   Linux:
+   ```bash
+   ./genomas
+   ```
+
+## Instalação
 
 1. Clone o repositório:
    ```bash
@@ -22,7 +40,7 @@ Siga estas etapas para configurar o projeto:
    cd cli_genomas_download/bin/x86_64-unknown-linux-gnu/release
    ```
 
-4. Execute o projeto
+3. Execute o projeto
    
    Windows:
    ```bash
