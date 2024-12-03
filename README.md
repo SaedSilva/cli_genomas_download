@@ -19,6 +19,9 @@ Aplicativo para download de Genomas.
    
    Linux:
    ```bash
+   chmod +x genomas
+   ```
+   ```bash
    ./genomas
    ```
 
@@ -48,6 +51,9 @@ Aplicativo para download de Genomas.
    ```
    
    Linux:
+   ```bash
+   ./genomas
+   ```
    ```bash
    ./genomas
    ```
