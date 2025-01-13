@@ -1,6 +1,8 @@
 mod api;
 mod utils;
 
+mod file;
+
 use crate::api::NBCIRequest;
 use std::io;
 
@@ -19,7 +21,7 @@ fn main() {
 
         println!("Pesquisando por: {}...", especie.trim());
         let mut request = NBCIRequest::default();
-        match api::search_in_assembly(especie.trim()) {
+        match api::search_in_taxonomy(especie.trim()) {
             Ok(xml) => match utils::get_id_from_xml(xml) {
                 Ok(id) => {
                     request.id = id.clone();

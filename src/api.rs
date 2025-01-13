@@ -9,14 +9,14 @@ use std::thread::sleep;
 use std::time::Duration;
 use std::{env, io};
 
-const BASE_URL_EUTILS: &str = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
-const BASE_URL_NCBI: &str = "https://api.ncbi.nlm.nih.gov/datasets/v2/";
+const BASE_URL_EUTILS: &'static str = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
+const BASE_URL_NCBI: &'static str = "https://api.ncbi.nlm.nih.gov/datasets/v2/";
 
 use crate::utils;
 use serde::{Deserialize, Serialize};
 use zip::ZipArchive;
 
-pub fn search_in_assembly(term: &str) -> Result<String, Error> {
+pub fn search_in_taxonomy(term: &str) -> Result<String, Error> {
     let url = format!("{}esearch.fcgi?db=taxonomy&term={}", BASE_URL_EUTILS, term);
     let http_client: Client = Client::new();
     let response = http_client.get(url).send()?.text()?;
@@ -55,7 +55,7 @@ fn download_genome_save_unzip(assembly: &str, folder_name: &str) -> Result<Strin
 
     create_dir_all(&download_dir).expect("Falha ao criar diretório para downloads");
 
-    let mut file_result = File::create(file_path.clone()).expect("Falha ao salvar arquivo");
+    let mut file_result = File::create(&file_path).expect("Falha ao salvar arquivo");
 
     file_result
         .write_all(&bytes)
@@ -136,7 +136,7 @@ fn remove_plasmidial(file_path: &str) -> Result<&str, &str> {
 
             Ok("Reescrito com sucesso")
         }
-        Err(err) => Err("Falha"),
+        Err(_) => Err("Falha"),
     }
 }
 
