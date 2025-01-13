@@ -1,9 +1,8 @@
-use flate2::read::GzDecoder;
 use reqwest::blocking::Client;
 use reqwest::Error;
 use std::collections::HashSet;
 use std::fs::{create_dir_all, remove_file, File};
-use std::io::{copy, BufRead, Read, Write};
+use std::io::{BufRead, Read, Write};
 use std::path::Path;
 use std::thread::sleep;
 use std::time::Duration;
@@ -12,9 +11,9 @@ use std::{env, io};
 const BASE_URL_EUTILS: &'static str = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
 const BASE_URL_NCBI: &'static str = "https://api.ncbi.nlm.nih.gov/datasets/v2/";
 
+use crate::file::Unzipper;
 use crate::utils;
 use serde::{Deserialize, Serialize};
-use zip::ZipArchive;
 
 pub fn search_in_taxonomy(term: &str) -> Result<String, Error> {
     let url = format!("{}esearch.fcgi?db=taxonomy&term={}", BASE_URL_EUTILS, term);
@@ -68,40 +67,12 @@ fn download_genome_save_unzip(assembly: &str, folder_name: &str) -> Result<Strin
 
 fn unzip_and_remove_plasmidial(file_path: &str) {
     println!("Deszipando: {}", file_path);
-    let zip_dir = Path::new(file_path).parent().ok_or("Falha").expect("Falha");
-    let file = File::open(file_path).expect("Falha ao abrir arquivo");
 
-    if file_path.ends_with(".zip") {
-        let mut zip = ZipArchive::new(file).expect("Falha ao criar zip");
+    let mut unzipper = Unzipper::new(file_path);
+    unzipper.unzip();
+    let file_out_path = &unzipper.output_file.unwrap();
 
-        for i in 0..zip.len() {
-            let mut file = zip.by_index(i).expect("Falha ao converter arquivo");
-            let out_path = zip_dir.join(file.name());
-
-            if file.is_dir() {
-                create_dir_all(&out_path).expect("Falha ao criar diretório");
-            } else {
-                if let Some(parent) = out_path.parent() {
-                    create_dir_all(parent).unwrap();
-                }
-                let mut outfile = File::create(&out_path).unwrap();
-                std::io::copy(&mut file, &mut outfile).unwrap();
-            }
-        }
-        remove_plasmidial(&*file_path.replace(".zip", ".fasta"))
-            .expect("Falha ao reescrever arquivo");
-    } else {
-        let gz_file = File::open(file_path).expect("Falha ao abrir arquivo .gz");
-        let mut decoder = GzDecoder::new(gz_file);
-
-        let output_file_path = file_path.strip_suffix(".gz").unwrap();
-        let mut output_file =
-            File::create(output_file_path).expect("Falha ao criar arquivo extraído");
-
-        copy(&mut decoder, &mut output_file).expect("Falha ao descompactar arquivo .gz");
-
-        remove_plasmidial(output_file_path).expect("Falha ao reescrever arquivo");
-    }
+    remove_plasmidial(file_out_path).expect("Falha ao reescrever arquivo");
 
     println!("deletando zip: {}", file_path);
     remove_file(file_path).expect("Falha ao excluir zip");
