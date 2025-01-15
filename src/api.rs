@@ -1,18 +1,18 @@
 use reqwest::blocking::Client;
 use reqwest::Error;
 use std::collections::HashSet;
-use std::fs::{create_dir_all, remove_file, File};
-use std::io::{BufRead, Read, Write};
-use std::path::Path;
+use std::fs::{remove_file, File};
+use std::io;
+use std::io::{BufRead, Write};
 use std::thread::sleep;
 use std::time::Duration;
-use std::{env, io};
 
 const BASE_URL_EUTILS: &'static str = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
 const BASE_URL_NCBI: &'static str = "https://api.ncbi.nlm.nih.gov/datasets/v2/";
 
-use crate::file::Unzipper;
-use crate::utils;
+use crate::download::download_and_save_file;
+use crate::file::unzip;
+use crate::{download, xml};
 use serde::{Deserialize, Serialize};
 
 pub fn search_in_taxonomy(term: &str) -> Result<String, Error> {
@@ -35,52 +35,29 @@ pub fn get_list_of_responses(request: &NBCIRequest) -> Result<NBCIResponse, Erro
     Ok(response)
 }
 
-fn download_genome_save_unzip(assembly: &str, folder_name: &str) -> Result<String, Error> {
-    let id = e_search(assembly);
-    let url = e_summary(&*id);
-    println!("Downloading from: {}", url);
-    let http_client: Client = Client::new();
+fn download_genome_save_unzip(
+    assembly: &str,
+    folder_name: &str,
+) -> Result<String, download::Error> {
+    let id = search_entrez_assembly(assembly);
+    let url = summary_entrez_assembly(&id);
 
-    let response = http_client.get(url).send()?;
-    let bytes = response.bytes()?;
+    let file_path = download_and_save_file(url.as_str(), folder_name, assembly)?;
 
-    let exe_path = env::current_exe().expect("Não foi possível obter o diretório do executável");
-    let exe_dir = exe_path
-        .parent()
-        .expect("Não foi possível obter o diretório do executável");
+    println!("Deszipando: {}", file_path);
+    let file_out_path = unzip(file_path.as_str());
 
-    let download_dir = exe_dir.join(format!("downloads/{}", folder_name));
-    let file_path = download_dir.join(format!("{}.fasta.gz", assembly));
+    println!("deletando zip: {}", file_path);
+    remove_file(file_path).expect("Falha ao excluir zip");
 
-    create_dir_all(&download_dir).expect("Falha ao criar diretório para downloads");
-
-    let mut file_result = File::create(&file_path).expect("Falha ao salvar arquivo");
-
-    file_result
-        .write_all(&bytes)
-        .expect("Falha ao salvar arquivo");
-
-    unzip_and_remove_plasmidial(file_path.to_str().expect("Falha ao parsear"));
+    remove_plasmidial(file_out_path.as_str()).expect("Falha ao reescrever arquivo");
 
     Ok("Salvo com sucesso!".to_string())
 }
 
-fn unzip_and_remove_plasmidial(file_path: &str) {
-    println!("Deszipando: {}", file_path);
-
-    let mut unzipper = Unzipper::new(file_path);
-    unzipper.unzip();
-    let file_out_path = &unzipper.output_file.unwrap();
-
-    remove_plasmidial(file_out_path).expect("Falha ao reescrever arquivo");
-
-    println!("deletando zip: {}", file_path);
-    remove_file(file_path).expect("Falha ao excluir zip");
-}
-
-fn remove_plasmidial(file_path: &str) -> Result<&str, &str> {
+fn remove_plasmidial(file_path: &str) -> Result<(), String> {
     if !file_path.ends_with(".fasta") {
-        return Err("Arquivo não é .fasta");
+        return Err(String::from("Arquivo não é .fasta"));
     }
     println!("Removendo plasmidial: {}", file_path);
     let file = File::open(file_path);
@@ -105,13 +82,16 @@ fn remove_plasmidial(file_path: &str) -> Result<&str, &str> {
                 writeln!(file, "{}", line).expect("Falha ao escrever linha");
             }
 
-            Ok("Reescrito com sucesso")
+            Ok(())
         }
-        Err(_) => Err("Falha"),
+        Err(_) => Err(String::from("Falha")),
     }
 }
 
-pub fn download_genomes(genomes: Vec<String>, folder_name: &str) -> Result<String, Error> {
+pub fn download_genomes(
+    genomes: Vec<String>,
+    folder_name: &str,
+) -> Result<String, download::Error> {
     let total = genomes.len();
     let mut count = 1;
     for genome in genomes {
@@ -125,7 +105,7 @@ pub fn download_genomes(genomes: Vec<String>, folder_name: &str) -> Result<Strin
     Ok("Salvos com sucesso".to_string())
 }
 
-pub fn get_list_string_of_name(mut request: NBCIRequest, value: &str, total: usize) -> Vec<String> {
+pub fn get_list_string_of_name(request: &mut NBCIRequest, value: &str, total: usize) -> Vec<String> {
     let mut result: HashSet<String> = HashSet::new();
     loop {
         match get_list_of_responses(&request) {
@@ -146,7 +126,7 @@ pub fn get_list_string_of_name(mut request: NBCIRequest, value: &str, total: usi
                 }
             }
             Err(error) => {
-                eprintln!("{}", error);
+                println!("{}", error);
                 break;
             }
         }
@@ -158,7 +138,7 @@ pub fn get_list_string_of_name(mut request: NBCIRequest, value: &str, total: usi
     result.into_iter().collect::<Vec<_>>()
 }
 
-fn e_search(genome_id: &str) -> String {
+fn search_entrez_assembly(genome_id: &str) -> String {
     let url = format!(
         "{}esearch.fcgi?db=assembly&term={}",
         BASE_URL_EUTILS, genome_id
@@ -169,11 +149,11 @@ fn e_search(genome_id: &str) -> String {
         .send()
         .expect("Falha ao fazer requisição")
         .text()
-        .expect("Falha ao sei la");
-    utils::get_id_list_from_xml(response).expect("Falha ao obter id")
+        .unwrap();
+    xml::get_id_list_from_xml(response).expect("Falha ao obter id")
 }
 
-fn e_summary(genome_id: &str) -> String {
+fn summary_entrez_assembly(genome_id: &str) -> String {
     let url = format!(
         "{}esummary.fcgi?db=assembly&id={}",
         BASE_URL_EUTILS, genome_id
@@ -184,8 +164,8 @@ fn e_summary(genome_id: &str) -> String {
         .send()
         .expect("Falha ao fazer requisição")
         .text()
-        .expect("Falha ao sei la");
-    utils::get_download_link_from_xml(response).unwrap_or_else(|error| {
+        .unwrap();
+    xml::get_download_link_from_xml(response).unwrap_or_else(|error| {
         println!("{}", error);
         String::new()
     })

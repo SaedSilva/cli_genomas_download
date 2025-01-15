@@ -1,6 +1,7 @@
 mod api;
 mod utils;
-
+mod download;
+mod xml;
 mod file;
 
 use crate::api::NBCIRequest;
@@ -8,7 +9,7 @@ use std::io;
 
 fn main() {
     loop {
-        println!("Digite o nome da especie que deseja pesquisar: ");
+        println!("Digite o nome da especie que deseja pesquisar (0 Para sair):");
 
         let mut especie = String::new();
         io::stdin()
@@ -21,37 +22,34 @@ fn main() {
 
         println!("Pesquisando por: {}...", especie.trim());
         let mut request = NBCIRequest::default();
-        match api::search_in_taxonomy(especie.trim()) {
-            Ok(xml) => match utils::get_id_from_xml(xml) {
-                Ok(id) => {
-                    request.id = id.clone();
-                    println!("Id encontrado para {}: {}", especie.trim(), id);
+        let xml = api::search_in_taxonomy(especie.trim()).expect("Falha ao pesquisar");
+        match xml::get_id_from_xml(xml) {
+            Ok(id) => {
+                println!("Id encontrado para {}: {}", especie.trim(), id);
+                request.id = id;
 
-                    atipicos(&mut request);
+                atipicos(&mut request);
 
-                    niveis(&mut request);
+                niveis(&mut request);
 
-                    data_inicial(&mut request);
+                data_inicial(&mut request);
 
-                    let filtro = filtro();
+                let filtro = filtro();
 
-                    let total = total();
+                let total = total();
 
-                    let list = api::get_list_string_of_name(request, filtro.trim(), total as usize);
+                let list = api::get_list_string_of_name(&mut request, filtro.trim(), total as usize);
 
-                    for genome in list.clone() {
-                        println!("Genoma encontrado: {}", genome.trim());
-                    }
-
-                    api::download_genomes(list, especie.trim()).expect("FALHA!!!");
+                for genome in list.clone() {
+                    println!("Genoma encontrado: {}", genome.trim());
                 }
-                Err(_) => {
-                    eprintln!("Falha ao encontrar Id");
-                    continue;
-                }
-            },
 
-            _ => {}
+                api::download_genomes(list, especie.trim()).expect("FALHA!!!");
+            }
+            Err(_) => {
+                eprintln!("Falha ao encontrar Id");
+                continue;
+            }
         }
     }
 }
