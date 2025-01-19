@@ -1,6 +1,8 @@
 use std::fs::{create_dir_all, File};
 use std::io::copy;
 use std::path::Path;
+use flate2::read::GzDecoder;
+use zip::ZipArchive;
 
 pub fn unzip(file_path: &str) -> String {
     if file_path.ends_with(".gz") {

@@ -1,8 +1,6 @@
 pub fn get_download_link_from_xml(xml: String) -> Result<String, String> {
     let splited = xml.split("\n");
-    let mut numb = 1;
     for line in splited {
-        numb += 1;
         if line.trim().starts_with("<FtpPath_GenBank>") {
             let ftp_link = line
                 .replace("<FtpPath_GenBank>", "")

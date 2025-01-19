@@ -4,7 +4,11 @@ use std::fs::{create_dir_all, File};
 use std::io::Write;
 use std::path::PathBuf;
 
-pub fn download_and_save_file(url: &str, folder_name: &str, file_name: &str) -> Result<String, Error> {
+pub fn download_and_save_fasta_gz(
+    url: &str,
+    folder_name: &str,
+    file_name: &str,
+) -> Result<String, Error> {
     let file_path = get_download_path(folder_name).join(format!("{}.fasta.gz", file_name));
     let mut file_result = File::create(&file_path)?;
 
@@ -27,18 +31,18 @@ fn get_download_path(folder_name: &str) -> PathBuf {
 
 #[derive(Debug)]
 pub enum Error {
-    IO(std::io::Error),
-    REQWEST(reqwest::Error),
+    IO(()),
+    REQWEST(()),
 }
 
 impl From<std::io::Error> for Error {
-    fn from(err: std::io::Error) -> Self {
-        Error::IO(err)
+    fn from(_: std::io::Error) -> Self {
+        Error::IO(())
     }
 }
 
 impl From<reqwest::Error> for Error {
-    fn from(err: reqwest::Error) -> Self {
-        Error::REQWEST(err)
+    fn from(_: reqwest::Error) -> Self {
+        Error::REQWEST(())
     }
 }
