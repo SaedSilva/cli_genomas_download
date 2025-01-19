@@ -20,21 +20,21 @@ pub struct NBCIDatasetGenomeResponse {
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct Report {
     pub(crate) accession: String,
-    // pub assembly_info: AssemblyInfo,
+    pub assembly_info: AssemblyInfo,
 }
 
-/*#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize)]
 pub struct AssemblyInfo {
-    biosample: BioSample,
+    biosample: Option<BioSample>,
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct BioSample {
-    samples_ids: Vec<SampleId>,
+    sample_ids: Option<Vec<SampleId>>,
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct SampleId {
-    db: String,
-    value: String,
-}*/
+    db: Option<String>,
+    value: Option<String>,
+}
