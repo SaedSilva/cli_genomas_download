@@ -1,0 +1,7 @@
+Assembly Accession	Assembly Name	Organism Name	Organism Infraspecific Names Breed	Organism Infraspecific Names Strain	Organism Infraspecific Names Cultivar	Organism Infraspecific Names Ecotype	Organism Infraspecific Names Isolate	Organism Infraspecific Names Sex	Annotation Name	Assembly Level	Assembly Release Date	WGS project accession	Assembly Stats Number of Scaffolds
+GCA_000195955.2	ASM19595v2	Mycobacterium tuberculosis H37Rv		H37Rv					Annotation submitted by Sanger Institute	Complete Genome	2013-02-01		1
+GCF_000195955.2	ASM19595v2	Mycobacterium tuberculosis H37Rv		H37Rv					Annotation submitted by NCBI RefSeq	Complete Genome	2013-02-01		1
+GCA_000157895.2	ASM15789v2	Mycobacterium kansasii ATCC 12478		ATCC 12478					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2013-11-01		2
+GCF_000157895.3	ASM15789v2	Mycobacterium kansasii ATCC 12478		ATCC 12478					GCF_000157895.3-RS_2024_03_28	Complete Genome	2013-11-01		2
+GCA_002355775.1	ASM235577v1	Mycobacterium ulcerans subsp. shinshuense		ATCC 33728					Annotation submitted by National Institute of Infectious Diseases	Complete Genome	2016-08-04		2
+GCF_002355775.1	ASM235577v1	Mycobacterium ulcerans subsp. shinshuense		ATCC 33728					GCF_002355775.1-RS_2024_03_29	Complete Genome	2016-08-04		2

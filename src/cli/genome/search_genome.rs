@@ -1,17 +1,11 @@
-use crate::entities::NCBIDatasetGenomeRequest;
-use crate::requests::entrez::search_in_taxonomy;
-use crate::services::genome::{
-    download_genomes_save_unzip_delete_remove_plasmidial, get_list_string_genomes_bank,
-};
-use crate::{download, xml};
 use std::collections::HashSet;
 use std::io;
+use crate::{download, xml};
+use crate::entities::NCBIDatasetGenomeRequest;
+use crate::requests::entrez::search_in_taxonomy;
+use crate::services::genome::{download_genomes_save_unzip_delete_remove_plasmidial, get_list_string_genomes_bank};
 
-pub fn init() {
-    search_genome().unwrap();
-}
-
-fn search_genome() -> Result<String, download::Error> {
+pub fn search_genome() -> Result<String, download::Error> {
     loop {
         let species = input_species();
 
@@ -80,7 +74,7 @@ fn input_total_genomes() -> u32 {
     100
 }
 
-fn input_filter_bank() -> String {
+pub fn input_filter_bank() -> String {
     let mut filtro = String::new();
     println!("Deseja filtrar por banco?");
     println!("1- GCF");
