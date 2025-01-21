@@ -1,0 +1,120 @@
+Assembly Accession	Assembly Name	Organism Name	Organism Infraspecific Names Breed	Organism Infraspecific Names Strain	Organism Infraspecific Names Cultivar	Organism Infraspecific Names Ecotype	Organism Infraspecific Names Isolate	Organism Infraspecific Names Sex	Annotation Name	Assembly Level	Assembly Release Date	WGS project accession	Assembly Stats Number of Scaffolds
+GCA_010727605.1	ASM1072760v1	Mycobacterium simiae		JCM 12377					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010727605.1	ASM1072760v1	Mycobacterium simiae		JCM 12377					GCF_010727605.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_000975265.2	ASM97526v2	Mycobacterium lepromatosis		FJ924					Annotation submitted by The University of Texas MD Anderson Cancer Center	Complete Genome	2022-02-07		1
+GCF_000975265.2	ASM97526v2	Mycobacterium lepromatosis		FJ924					GCF_000975265.2-RS_2024_05_13	Complete Genome	2022-02-07		1
+GCA_003614435.1	ASM361443v1	Mycobacterium paragordonae		49061					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2018-10-04		5
+GCF_003614435.1	ASM361443v1	Mycobacterium paragordonae		49061					GCF_003614435.1-RS_2024_04_22	Complete Genome	2018-10-04		5
+GCA_010729105.1	ASM1072910v1	Mycobacterium saskatchewanense		JCM 13016					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010729105.1	ASM1072910v1	Mycobacterium saskatchewanense		JCM 13016					GCF_010729105.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_019645855.1	ASM1964585v1	Mycobacterium malmoense		ATCC 29571					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-08-17		1
+GCF_019645855.1	ASM1964585v1	Mycobacterium malmoense		ATCC 29571					GCF_019645855.1-RS_2024_06_24	Complete Genome	2021-08-17		1
+GCA_963853645.1	MriyDSM45176v1	Mycobacterium riyadhense		DSM 45176			human			Complete Genome	2024-04-09		3
+GCF_963853645.1	MriyDSM45176v1	Mycobacterium riyadhense		DSM 45176			human		GCF_963853645.1-RS_2024_04_10	Complete Genome	2024-04-11		3
+GCA_013466425.1	ASM1346642v1	Mycobacterium vicinigordonae		24					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-07-22		1
+GCF_013466425.1	ASM1346642v1	Mycobacterium vicinigordonae		24					GCF_013466425.1-RS_2024_05_05	Complete Genome	2020-07-22		1
+GCA_010730195.1	ASM1073019v1	Mycobacterium conspicuum		JCM 14738					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010730195.1	ASM1073019v1	Mycobacterium conspicuum		JCM 14738					GCF_010730195.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_010730355.1	ASM1073035v1	Mycobacterium florentinum		JCM 14740					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010730355.1	ASM1073035v1	Mycobacterium florentinum		JCM 14740					GCF_010730355.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010731715.1	ASM1073171v1	Mycobacterium stomatepiae		JCM 17783					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731715.1	ASM1073171v1	Mycobacterium stomatepiae		JCM 17783					GCF_010731715.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010731775.1	ASM1073177v1	Mycobacterium mantenii		JCM 18113					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731775.1	ASM1073177v1	Mycobacterium mantenii		JCM 18113					GCF_010731775.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010731655.1	ASM1073165v1	Mycobacterium paraseoulense		JCM 16952					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731655.1	ASM1073165v1	Mycobacterium paraseoulense		JCM 16952					GCF_010731655.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010728525.1	ASM1072852v1	Mycobacterium shottsii		JCM 12657					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010728525.1	ASM1072852v1	Mycobacterium shottsii		JCM 12657					GCF_010728525.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_010730575.1	ASM1073057v1	Mycobacterium parmense		JCM 14742					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010730575.1	ASM1073057v1	Mycobacterium parmense		JCM 14742					GCF_010730575.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_022374895.2	ASM2237489v2	Mycobacterium lentiflavum		ATCC 51985					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-08-24		4
+GCF_022374895.2	ASM2237489v2	Mycobacterium lentiflavum		ATCC 51985					GCF_022374895.2-RS_2024_06_24	Complete Genome	2022-08-24		4
+GCA_900292015.1	MB901379	Mycobacterium basiliense					901379		Annotation submitted by University Hospital Basel	Complete Genome	2018-12-12		1
+GCF_900292015.1	MB901379	Mycobacterium basiliense					901379		GCF_900292015.1-RS_2024_12_16	Complete Genome	2018-12-12		1
+GCA_018278905.1	ASM1827890v1	Mycobacterium spongiae		FSD4b-SM					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-05-05		1
+GCF_018278905.1	ASM1827890v1	Mycobacterium spongiae		FSD4b-SM					GCF_018278905.1-RS_2024_05_06	Complete Genome	2021-05-05		1
+GCA_010731595.1	ASM1073159v1	Mycobacterium seoulense		JCM 16018					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731595.1	ASM1073159v1	Mycobacterium seoulense		JCM 16018					GCF_010731595.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_022430545.2	ASM2243054v2	Mycobacterium paraterrae		DSM 45127					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-09-07		1
+GCF_022430545.2	ASM2243054v2	Mycobacterium paraterrae		DSM 45127					GCF_022430545.2-RS_2024_06_24	Complete Genome	2022-09-07		1
+GCA_010727945.1	ASM1072794v1	Mycobacterium cookii		JCM 12404					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010727945.1	ASM1072794v1	Mycobacterium cookii		JCM 12404					GCF_010727945.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_010728725.1	ASM1072872v1	Mycobacterium branderi		JCM 12687					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		2
+GCF_010728725.1	ASM1072872v1	Mycobacterium branderi		JCM 12687					GCF_010728725.1-RS_2024_12_13	Complete Genome	2020-02-06		2
+GCA_010731535.1	ASM1073153v1	Mycobacterium lacus		JCM 15657					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731535.1	ASM1073153v1	Mycobacterium lacus		JCM 15657					GCF_010731535.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_010730745.1	ASM1073074v1	Mycobacterium heidelbergense		JCM 14842					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010730745.1	ASM1073074v1	Mycobacterium heidelbergense		JCM 14842					GCF_010730745.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010731635.1	ASM1073163v1	Mycobacterium noviomagense		JCM 16367					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731635.1	ASM1073163v1	Mycobacterium noviomagense		JCM 16367					GCF_010731635.1-RS_2024_12_13	Complete Genome	2020-02-06		1
+GCA_010730055.1	ASM1073005v1	Mycobacterium shinjukuense		JCM 14233					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010730055.1	ASM1073005v1	Mycobacterium shinjukuense		JCM 14233					GCF_010730055.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_010726505.1	ASM1072650v1	Mycobacterium novum		JCM 6391					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010726505.1	ASM1072650v1	Mycobacterium novum		JCM 6391					GCF_010726505.1-RS_2024_12_16	Complete Genome	2020-02-06		1
+GCA_022175585.2	ASM2217558v2	Mycobacterium avium subsp. hominissuis		OCU889s_P11_4s					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-05-08		1
+GCF_022175585.2	ASM2217558v2	Mycobacterium avium subsp. hominissuis		OCU889s_P11_4s					GCF_022175585.2-RS_2024_07_13	Complete Genome	2024-05-08		1
+GCA_020736005.1	ASM2073600v1	Mycobacterium intracellulare		FDAARGOS_1564					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-11-03		2
+GCF_020736005.1	ASM2073600v1	Mycobacterium intracellulare		FDAARGOS_1564					GCF_020736005.1-RS_2024_12_09	Complete Genome	2021-11-03		2
+GCA_003253775.1	ASM325377v1	Mycobacterium leprae		MRHRU-235-G					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2018-06-18		1
+GCF_003253775.1	ASM325377v1	Mycobacterium leprae		MRHRU-235-G					GCF_003253775.1-RS_2024_03_28	Complete Genome	2018-06-18		1
+GCA_016861545.1	ASM1686154v1	Mycobacterium heckeshornense		JMUB5695					Annotation submitted by Jichi Medical University	Complete Genome	2021-01-22		1
+GCF_016861545.1	ASM1686154v1	Mycobacterium heckeshornense		JMUB5695					GCF_016861545.1-RS_2024_03_28	Complete Genome	2021-01-22		1
+GCA_021183725.1	ASM2118372v1	Mycobacterium ostraviense		FDAARGOS_1613					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-12-14		1
+GCF_021183725.1	ASM2118372v1	Mycobacterium ostraviense		FDAARGOS_1613					GCF_021183725.1-RS_2024_12_16	Complete Genome	2021-12-14		1
+GCA_010726765.1	ASM1072676v1	Mycobacterium gallinarum		JCM 6399					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		2
+GCF_010726765.1	ASM1072676v1	Mycobacterium gallinarum		JCM 6399					GCF_010726765.1-RS_2024_06_22	Complete Genome	2020-02-06		2
+GCA_034555895.2	ASM3455589v2	Mycobacterium europaeum		050079					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-06-03		4
+GCF_034555895.2	ASM3455589v2	Mycobacterium europaeum		050079					GCF_034555895.2-RS_2024_06_04	Complete Genome	2024-06-04		4
+GCA_030252325.1	ASM3025232v1	Candidatus Mycobacterium wuenschmannii					wuenschmanii		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2023-06-11		1
+GCF_030252325.1	ASM3025232v1	Candidatus Mycobacterium wuenschmannii					wuenschmanii		GCF_030252325.1-RS_2024_10_11	Complete Genome	2023-06-11		1
+GCA_023515995.1	ASM2351599v1	Candidatus Mycobacterium methanotrophicum					Sulfur Cave		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-05-21		2
+GCF_023515995.1	ASM2351599v1	Candidatus Mycobacterium methanotrophicum					Sulfur Cave		GCF_023515995.1-RS_2024_08_14	Complete Genome	2022-05-21		2
+GCA_009741445.1	ASM974144v1	Mycobacterium avium subsp. avium		DSM 44156					Annotation submitted by Leibniz Institute DSMZ	Complete Genome	2019-12-11		1
+GCF_009741445.1	ASM974144v1	Mycobacterium avium subsp. avium		DSM 44156					GCF_009741445.1-RS_2024_05_17	Complete Genome	2019-12-11		1
+GCA_023278525.2	ASM2327852v2	Mycobacterium intracellulare ATCC 13950		ATCC 13950					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-01-24		1
+GCF_023278525.2	ASM2327852v2	Mycobacterium intracellulare ATCC 13950		ATCC 13950					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-01-24		1
+GCA_045277555.1	MycoMar44344	Mycobacterium marinum		ATCC 927					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2023-10-31		2
+GCF_045277555.1	MycoMar44344	Mycobacterium marinum		ATCC 927					GCF_045277555.1-RS_2024_12_16	Complete Genome	2024-11-26		2
+GCA_003391395.1	ASM339139v1	Mycobacterium marinum		CCUG20998					Annotation submitted by Uppsala University	Complete Genome	2018-08-15		1
+GCF_003391395.1	ASM339139v1	Mycobacterium marinum		CCUG20998					GCF_003391395.1-RS_2024_06_17	Complete Genome	2018-08-15		1
+GCA_022374915.3	ASM2237491v3	Mycobacterium ulcerans		ATCC 19423					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-09-02		2
+GCF_022374915.2	ASM2237491v3	Mycobacterium ulcerans		ATCC 19423					GCF_022374915.2-RS_2024_06_24	Complete Genome	2022-09-02		2
+GCA_016592155.1	ASM1659215v1	Mycobacterium heckeshornense		JCM 15655					Annotation submitted by Mycobacteriology, National Institute of Infectious Diseases	Complete Genome	2020-12-28		1
+GCF_016592155.1	ASM1659215v1	Mycobacterium heckeshornense		JCM 15655					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-12-28		1
+GCA_009936235.1	ASM993623v1	Mycobacterium xenopi		JCM 15661T					Annotation submitted by Mycobacteriology, National Institute of Infectious Diseases	Complete Genome	2019-12-25		1
+GCF_009936235.1	ASM993623v1	Mycobacterium xenopi		JCM 15661					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2019-12-25		1
+GCA_010731935.1	ASM1073193v1	Mycobacterium paraintracellulare		JCM 30622					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		1
+GCF_010731935.1	ASM1073193v1	Mycobacterium paraintracellulare		JCM 30622					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-02-06		1
+GCA_022558505.1	ASM2255850v1	Mycobacterium malmoense		DSM 44163					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-03-14		1
+GCF_022558505.1	ASM2255850v1	Mycobacterium malmoense		DSM 44163					GCF_022558505.1-RS_2024_04_02	Complete Genome	2022-03-14		1
+GCA_015689175.1	ASM1568917v1	Mycobacterium kubicae		JCM 13573					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-11-25		3
+GCF_015689175.1	ASM1568917v1	Mycobacterium kubicae		JCM 13573					GCF_015689175.1-RS_2024_03_29	Complete Genome	2020-11-25		3
+GCA_019456695.2	ASM1945669v2	Mycobacterium shottsii		M175					Annotation submitted by Old Dominion University	Complete Genome	2022-04-12		1
+GCF_019456695.2	ASM1945669v2	Mycobacterium shottsii		M175					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2022-04-12		1
+GCA_010731675.1	ASM1073167v1	Mycobacterium marseillense		JCM 17324					Annotation submitted by Department of Infection Metagenomics, Osaka University	Complete Genome	2020-02-06		2
+GCF_010731675.1	ASM1073167v1	Mycobacterium marseillense		JCM 17324					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-02-06		2
+GCA_963853665.1	MdecATCCTSD117v1	Mycobacterium decipiens		ATCC TSD-117			human			Complete Genome	2024-04-09		1
+GCF_963853665.1	MdecATCCTSD117v1	Mycobacterium decipiens		ATCC TSD-117			human		GCF_963853665.1-RS_2024_04_10	Complete Genome	2024-04-11		1
+GCA_963853655.1	MlacDSM44577v1	Mycobacterium lacus		DSM 44577			human			Complete Genome	2024-04-09		1
+GCF_963853655.1	MlacDSM44577v1	Mycobacterium lacus		DSM 44577			human		GCF_963853655.1-RS_2024_04_10	Complete Genome	2024-04-11		1
+GCA_963853675.1	MshiDSM45663v1	Mycobacterium shinjukuense		DSM 45663			human			Complete Genome	2024-04-09		1
+GCF_963853675.1	MshiDSM45663v1	Mycobacterium shinjukuense		DSM 45663			human		GCF_963853675.1-RS_2024_04_10	Complete Genome	2024-04-11		1
+GCA_030566675.1	ASM3056667v1	Mycobacterium tuberculosis		MTb-Oman-3215873						Complete Genome	2023-08-01		1
+GCF_030566675.1	ASM3056667v1	Mycobacterium tuberculosis		MTb-Oman-3215873					GCF_030566675.1-RS_2024_08_13	Complete Genome	2023-08-01		1
+GCA_963525475.1	MtbRf	Mycobacterium tuberculosis					GReAT_CRyPTIC_Unmapped_H37Rv		Annotation submitted by Seoul National University	Complete Genome	2023-09-30		1
+GCF_963525475.1	MtbRf	Mycobacterium tuberculosis					GReAT_CRyPTIC_Unmapped_H37Rv		GCF_963525475.1-RS_2024_11_06	Complete Genome	2023-09-30		1
+GCA_017901095.1	ASM1790109v1	Mycobacterium tuberculosis		CG24					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-04-12		1
+GCF_017901095.1	ASM1790109v1	Mycobacterium tuberculosis		CG24					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2021-04-12		1
+GCA_030566105.1	ASM3056610v1	Mycobacterium tuberculosis		MTb-Oman-3216462						Complete Genome	2023-08-01		1
+GCF_030566105.1	ASM3056610v1	Mycobacterium tuberculosis		MTb-Oman-3216462					GCF_030566105.1-RS_2024_08_13	Complete Genome	2023-08-01		1
+GCA_033124885.1	ASM3312488v1	Mycobacterium tuberculosis		MTBCR170027					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2023-10-30		1
+GCF_033124885.1	ASM3312488v1	Mycobacterium tuberculosis		MTBCR170027					GCF_033124885.1-RS_2025_01_15	Complete Genome	2023-10-30		1
+GCA_014899985.1	ASM1489998v1	Mycobacterium tuberculosis		3-0096P6C4					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-10-20		1
+GCF_014899985.1	ASM1489998v1	Mycobacterium tuberculosis		3-0096P6C4					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-10-20		1
+GCA_040208995.1	ASM4020899v1	Mycobacterium tuberculosis		H-19-0008					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-06-17		1
+GCF_040208995.1	ASM4020899v1	Mycobacterium tuberculosis		H-19-0008					GCF_040208995.1-RS_2024_06_19	Complete Genome	2024-06-20		1
+GCA_014899965.1	ASM1489996v1	Mycobacterium tuberculosis		3-0124P6C4					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2020-10-20		1
+GCF_014899965.1	ASM1489996v1	Mycobacterium tuberculosis		3-0124P6C4					GCF_014899965.1-RS_2024_07_04	Complete Genome	2020-10-20		1
+GCA_040208985.1	ASM4020898v1	Mycobacterium tuberculosis		H-19-0007					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-06-17		1
+GCF_040208985.1	ASM4020898v1	Mycobacterium tuberculosis		H-19-0007					GCF_040208985.1-RS_2024_06_19	Complete Genome	2024-06-20		1
+GCA_040209325.1	ASM4020932v1	Mycobacterium tuberculosis		H-20-0024					NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	Complete Genome	2024-06-17		1

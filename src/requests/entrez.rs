@@ -41,3 +41,17 @@ pub fn search_in_taxonomy(term: &str) -> Result<String, Error> {
     let response = http_client.get(url).send()?.text()?;
     Ok(response)
 }
+
+pub fn search_sra(term: &str) -> Result<String, Error> {
+    let url = format!("{}esearch.fcgi?db=sra&term={}", BASE_URL_EUTILS, term);
+    let http_client: Client = Client::new();
+    let response = http_client.get(url).send()?.text()?;
+    Ok(response)
+}
+
+pub fn summary_rsa(id: &str) -> Result<String, Error> {
+    let url = format!("{}esummary.fcgi?db=sra&id={}", BASE_URL_EUTILS, id);
+    let http_client: Client = Client::new();
+    let response = http_client.get(url).send()?.text()?;
+    Ok(response)
+}
